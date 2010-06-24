@@ -27,8 +27,7 @@ class Document extends DocumentStructure implements Documentable
 	}
 	
 	public function insert(){
-		$c = $this->_collection->getCollection();
-		$this->_document = $c->insert($this->_document);
+		$this->_document = $this->_collection->getCollection()->insert($this->_document);
 	}
 
 }

@@ -17,7 +17,7 @@ class Collection
 		$this->name			= $name;
 	}
 	
-	public function create($doc)
+	public function create()
 	{
 		return new $this->name($this);
 	}

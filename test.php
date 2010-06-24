@@ -12,7 +12,6 @@ class Amigo extends Document
 }
 
 $m = new Mongo();
-
 $amigos = new Collection('Teste', 'Amigo', $m);
 
 $l = $amigos->create();
