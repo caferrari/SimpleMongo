@@ -17,12 +17,10 @@ class Document extends DocumentStructure implements Documentable
 	}
 	
 	public function __set($p, $v){
-		if ($p{0}==='_' && isset($this->$p)) return $this->$p = $v;
 		$this->_document->$p = $v;
 	}
 	
 	public function __get($p){
-		if ($p{0}==='_' && isset($this->$p)) return $this->$p;
 		return $this->_document->$p;
 	}
 	

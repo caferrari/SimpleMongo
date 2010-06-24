@@ -17,9 +17,11 @@ class Collection
 		$this->name			= $name;
 	}
 	
-	public function create()
+	public function create($pars = array())
 	{
-		return new $this->name($this);
+		$obj = new $this->name($this);
+		foreach ($pars as $k => $v) $obj->$k = $v;
+		return $obj;
 	}
 	
 	public function getCollection()
